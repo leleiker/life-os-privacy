@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="robots" content="index,follow" />
+    <title>Datenschutz – Life OS</title>
+    <meta
+      name="description"
+      content="Datenschutzerklärung für die private Anwendung Life OS und ihre WHOOP-Anbindung. Stand 23. Oktober 2026."
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --canvas: oklch(0.145 0.004 265);
+        --surface: oklch(0.182 0.005 265);
+        --surface-2: oklch(0.215 0.006 265);
+        --line: oklch(1 0 0 / 0.08);
+        --fg: oklch(0.965 0.003 265);
+        --muted: oklch(0.74 0.01 265);
+        --subtle: oklch(0.62 0.012 265);
+        --accent: oklch(0.8 0.12 170);
+        --warn: oklch(0.84 0.13 85);
+        --warn-soft: oklch(0.84 0.13 85 / 0.12);
+        --max: 42rem;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { background: var(--canvas); }
+
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        background:
+          radial-gradient(1200px 600px at 85% -10%, oklch(0.8 0.12 170 / 0.05), transparent 60%),
+          radial-gradient(900px 500px at -10% 110%, oklch(0.76 0.1 245 / 0.04), transparent 60%),
+          var(--canvas);
+        color: var(--fg);
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-size: 1.0625rem;
+        line-height: 1.65;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a { color: var(--accent); text-underline-offset: 0.18em; }
+      a:hover { color: oklch(0.86 0.13 170); }
+
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+
+      .wrap {
+        width: min(var(--max), calc(100% - 2.5rem));
+        margin: 0 auto;
+        padding: 4.5rem 0 5rem;
+      }
+
+      .eyebrow {
+        margin: 0 0 0.75rem;
+        color: var(--accent);
+        font-size: 0.75rem;
+        font-weight: 650;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.25rem, 5vw, 3.25rem);
+        font-weight: 620;
+        letter-spacing: -0.035em;
+        line-height: 1.05;
+      }
+
+      .meta {
+        margin: 1rem 0 0;
+        color: var(--subtle);
+        font-size: 0.875rem;
+      }
+
+      .banner {
+        margin: 2rem 0 0;
+        padding: 1rem 1.1rem;
+        border: 1px solid oklch(0.84 0.13 85 / 0.35);
+        border-radius: 1rem;
+        background: var(--warn-soft);
+        color: var(--fg);
+        font-size: 0.9375rem;
+      }
+
+      .banner strong { color: var(--warn); font-weight: 650; }
+
+      h2 {
+        margin: 2.75rem 0 0.75rem;
+        font-size: 1.25rem;
+        font-weight: 620;
+        letter-spacing: -0.02em;
+      }
+
+      p, li { color: var(--muted); }
+      strong { color: var(--fg); font-weight: 620; }
+      ul { margin: 0.75rem 0 0; padding-left: 1.15rem; }
+      li + li { margin-top: 0.4rem; }
+
+      .todo {
+        display: inline;
+        padding: 0.05em 0.35em;
+        border-radius: 0.35rem;
+        background: var(--warn-soft);
+        color: var(--warn);
+        font-weight: 620;
+      }
+
+      section {
+        padding-top: 0.25rem;
+        border-top: 1px solid transparent;
+      }
+
+      .en {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--line);
+      }
+
+      .en p, .en li { font-size: 0.975rem; }
+
+      footer {
+        margin-top: 3rem;
+        color: var(--subtle);
+        font-size: 0.8125rem;
+      }
+
+      @media print {
+        :root { color-scheme: light; }
+        body { background: white; color: black; }
+        p, li, .meta, footer { color: #222; }
+        a { color: #064; }
+        .banner, .todo { background: #fff8e6; color: #222; }
+        .wrap { width: 100%; padding: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <p class="eyebrow">Life OS</p>
+      <h1>Datenschutz</h1>
+      <p class="meta">Stand 23. Oktober 2026 · private Einzelnutzung</p>
+
+      <div class="banner">
+        <p>
+          <strong>Rechtlich ungeklärt.</strong>
+          Dieser Text ist keine Rechtsberatung. Die deutsche Fassung ist maßgeblich.
+        </p>
+        <ul>
+          <li>Ob die Haushaltsausnahme nach Art. 2 Abs. 2 lit. c DSGVO die reine Eigennutzung auf dem eigenen Rechner erfasst. Eine Übermittlung an OpenAI fällt darunter voraussichtlich nicht.</li>
+          <li>Ob deshalb der bürgerliche Name öffentlich genannt werden muss. Die Wohnanschrift wird in diesem Text nicht genannt.</li>
+          <li>WHOOP untersagt, WHOOP-Daten zum Erstellen, Trainieren oder Verbessern eines KI-Modells zu nutzen und untersagt die Weitergabe an Dritte. Ob eine spätere reine Abfrage eines bestehenden Modells erlaubt wäre, ist ungeklärt. Diese Abfrage ist nicht gebaut. Eine gespeicherte Einwilligung hebt die Sperre nicht auf.</li>
+        </ul>
+      </div>
+
+      <section>
+        <h2>1. Kontakt</h2>
+        <p>
+          Life OS betreibt eine Privatperson allein für sich. Es gibt kein Unternehmen, kein Angebot an Dritte
+          und keinen Datenschutzbeauftragten.
+        </p>
+        <p>
+          Kontakt für diese Anwendung und für die von WHOOP verlangte Erreichbarkeit:
+          <a href="mailto:reichrtfinance@gmail.com">reichrtfinance@gmail.com</a>
+        </p>
+        <p>
+          Eine Wohnanschrift steht hier nicht. Dieselbe E-Mail-Adresse kann im WHOOP Developer Dashboard als
+          administrativer Kontakt der App eingetragen werden. Sie muss nicht dieselbe Adresse sein wie das
+          private Postfach, solange Nachrichten dort ankommen.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Worum es geht</h2>
+        <p>
+          Life OS ist eine private Anwendung für eine Person. Sie wird nicht öffentlich angeboten, hat keine weiteren Konten
+          und ist nicht als Dienst für Dritte eingerichtet. Derzeit läuft sie auf dem privaten Windows-PC des Betreibers.
+          Ein Betrieb auf einem privaten NAS ist vorgesehen und noch nicht eingerichtet.
+        </p>
+        <p>
+          Diese Seite beschreibt, was die Anwendung mit Daten tut. Sie selbst speichert keine Eingaben, setzt keine Cookies
+          und lädt keine Schriften, Skripte oder Bilder von anderen Servern.
+        </p>
+        <p>
+          <span class="todo">Bitte rechtlich prüfen: Art. 2 Abs. 2 lit. c DSGVO.</span>
+          Die Verarbeitung eigener Daten für ausschließlich persönliche oder familiäre Tätigkeiten kann außerhalb der DSGVO liegen.
+          Sobald Daten an einen Dritten wie OpenAI gehen, gilt diese Ausnahme für diese Übermittlung voraussichtlich nicht.
+          Die folgenden Angaben stehen deshalb trotzdem hier, auch für die von WHOOP verlangte Datenschutzerklärung.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. WHOOP-Verbindung</h2>
+        <p>
+          Eine Verbindung mit WHOOP ist freiwillig. Ohne sie zeigt der Gesundheitsbereich keine WHOOP-Messwerte.
+          Die Anmeldung folgt OAuth 2.0 von WHOOP. Life OS erhält dabei ein Access-Token und, weil der Scope <strong>offline</strong>
+          angefordert wird, ein Refresh-Token. Die angeforderten Rechte sind ausschließlich lesend:
+        </p>
+        <ul>
+          <li>read:recovery, read:cycles, read:sleep, read:workout, read:profile, read:body_measurement, offline</li>
+        </ul>
+        <p>
+          Der Betreiber wird zu WHOOP weitergeleitet und willigt dort in den Zugriff ein. Life OS speichert für diese Anmeldung
+          zehn Minuten lang nur den SHA-256-Hash eines einmaligen Prüfwerts, nicht den Prüfwert selbst.
+          Client-ID und Client-Secret bleiben in der Server-Konfiguration des Betreibers. Sie stehen nicht in dieser Seite und nicht im Browser.
+        </p>
+        <p>
+          Aus dem WHOOP-Profil speichert Life OS die numerische WHOOP-Nutzerkennung und den Vornamen.
+          Die E-Mail-Adresse aus dem Profil wird gelesen und verworfen. Sie wird nicht abgelegt.
+        </p>
+      </section>
+
+      <section>
+        <h2>4. Welche WHOOP-Daten gespeichert werden</h2>
+        <p>Nach einer Verbindung holt Life OS die von WHOOP bereitgestellten Werte und speichert sie in der eigenen Datenbank:</p>
+        <ul>
+          <li>Zyklen: Strain, Energie, durchschnittliche und maximale Herzfrequenz, Bewertungsstatus, Zeitraum</li>
+          <li>Recovery: Recovery-Wert, Herzratenvariabilität (HRV), Ruhepuls, Blutsauerstoff, Hauttemperatur, Hinweis zur Kalibrierung</li>
+          <li>Schlaf: Schlafstadien, Atemfrequenz, Schlafleistung, Konsistenz, Effizienz, Störungen, Kennzeichnung als Tagschlaf</li>
+          <li>Workouts: Sportart, Strain, Herzfrequenz, Energie, Strecke, Höhenmeter, Herzfrequenzzonen, Zeitraum</li>
+          <li>Körpermaße: Größe, Gewicht, maximale Herzfrequenz</li>
+        </ul>
+        <p>
+          Der erste Abruf umfasst die letzten 90 Tage. Spätere Abrufe wiederholen die letzten 14 Tage, damit nachträglich bewertete
+          Werte ankommen. Dieselbe WHOOP-Kennung wird aktualisiert. Noch nicht bewertete Werte bleiben leer.
+          Life OS stellt keine Diagnose und trifft keine automatisierte Entscheidung mit rechtlicher Wirkung.
+          Die Scores berechnet WHOOP.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Wo die Daten liegen und wie sie geschützt sind</h2>
+        <p>
+          Messwerte und Tokens liegen in der Datenbank auf dem Rechner, auf dem Life OS läuft. Das ist derzeit der private
+          Windows-PC des Betreibers. Ein späterer Umzug auf ein privates NAS ist nicht erfolgt.
+          Die Anwendung ist nicht öffentlich im Internet erreichbar.
+        </p>
+        <p>
+          Access- und Refresh-Token werden mit AES-256-GCM verschlüsselt gespeichert.
+          Messwerte, Zeiten, Scores, Sportart, Körpermaße sowie WHOOP-Nutzerkennung und Vorname liegen ebenfalls
+          als AES-256-GCM-Umschlag. Der Abgleich bei der Synchronisierung nutzt einen HMAC, nicht die WHOOP-Kennung im Klartext.
+          Die Life-OS-Nutzerkennung bleibt lesbar, damit Löschen und die Trennung der Konten funktionieren.
+          Zeitfilter für Diagramme und die Synchronisierung laufen nach dem Entschlüsseln im Prozess.
+          Der Schlüssel liegt nur in der Server-Umgebung des Betreibers, nicht in der Datenbank, nicht in einem Git-Repository
+          und nicht in der Backup-Datei. Backups der Datenbank werden mit age verschlüsselt. Danach bleiben die WHOOP-Zeilen
+          zusätzlich Umschläge und sind erst mit demselben Schlüssel lesbar.
+          Ein abgelaufenes Access-Token wird mit dem Refresh-Token erneuert. Das neue Token-Paar ersetzt das gespeicherte.
+          Der Abruf bei WHOOP läuft über HTTPS. Die Seite im Browser kann lokal noch über HTTP laufen, bis der Betreiber HTTPS einrichtet.
+        </p>
+        <p>
+          Ein persönlicher Export aus den Einstellungen enthält die entschlüsselten WHOOP-Messwerte und die Verbindungsangaben
+          ohne die Tokens und ohne die Umschläge. Der Export ist eine Kopie zum Mitnehmen. Er löscht nichts.
+          Fehlt der Schlüssel, enthält der Export keine WHOOP-Messwerte.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. OpenAI</h2>
+        <p>
+          WHOOP-Messwerte werden nicht an OpenAI oder einen anderen KI-Dienst übertragen und nicht zum Trainieren
+          oder Verbessern eines KI-Modells verwendet.
+          Der Coach fügt sie nicht in Anfragen ein. Eine intelligente Auswertung dieser Messwerte ist nicht gebaut.
+          Die WHOOP-Bedingungen, insbesondere Abschnitt 4.2, untersagen die Weitergabe an Dritte und die Nutzung
+          zum Trainieren oder Verbessern eines Modells, solange die Zulässigkeit nicht geklärt ist.
+        </p>
+        <p>
+          In der Gesundheitsansicht gibt es eine Einwilligung mit dem Text
+          „Einwilligung für eine spätere Auswertung vormerken“. Sie ist standardmäßig aus.
+          Ein gesetztes Häkchen speichert nur diesen Wunsch. Es gibt keine Messwerte an ein Modell frei
+          und hebt die Sperre nicht auf. Die Schnittstelle gibt auch bei gesetztem Häkchen keine Messwerte zurück.
+          Der Coach ruft diese Schnittstelle nicht auf.
+          Vollständiges Löschen der WHOOP-Daten und jede neue Verbindung setzen dieses Häkchen auf aus.
+          Eine neue Verbindung übernimmt eine frühere Einwilligung nicht.
+        </p>
+        <p>
+          Wenn der Betreiber einen OpenAI-Schlüssel einträgt und den Coach nutzt, gehen die von ihm geschriebenen Chat-Inhalte
+          an OpenAI. Schreibt er dort selbst Gesundheitsangaben, verlassen auch diese Angaben das Gerät.
+          OpenAI verarbeitet sie nach den Bedingungen von OpenAI.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Trennen, Löschen, Aufbewahrung</h2>
+        <p>In der Anwendung gibt es heute diese Möglichkeiten. Beide fragen vorher in einem Dialog nach:</p>
+        <ul>
+          <li>
+            <strong>Trennen.</strong>
+            Life OS widerruft den Zugriff bei WHOOP und löscht die verschlüsselten Tokens.
+            Zyklen, Recovery, Schlaf, Workouts, Körpermaße, Vorname und WHOOP-Nutzerkennung bleiben verschlüsselt auf dem Gerät.
+            Die Anwendung sagt das vor dem Trennen und zeigt es danach erneut an.
+          </li>
+          <li>
+            <strong>WHOOP-Daten löschen.</strong>
+            Die Schaltfläche bleibt sichtbar, solange noch Messwerte oder die Verknüpfung gespeichert sind, auch nach dem Trennen.
+            Sie entfernt Zyklen, Recovery, Schlaf, Workouts, Körpermaße, die WHOOP-Nutzerkennung, den Vornamen,
+            die Verbindungszeile und die kurzlebigen OAuth-Prüfwerte.
+            Ziel-Check-ins, die als Quelle WHOOP tragen, werden mit entfernt. Manuelle Einträge bleiben.
+            Widgets bleiben liegen, enthalten aber keine Kopie der Messwerte und zeigen danach keinen Wert.
+            Eine Volltextsuche über WHOOP-Daten gibt es nicht. Die Datenbankindizes der WHOOP-Tabellen werden mit den Zeilen geleert.
+            Besteht die Verbindung noch, wird der Zugriff bei WHOOP vor dem lokalen Löschen widerrufen.
+            Schlägt der Widerruf fehl, wird die lokale Kopie trotzdem entfernt.
+          </li>
+          <li>
+            <strong>Audit-Log.</strong>
+            Verbindung, Trennen und Löschen erzeugen einen Eintrag mit Zeitpunkt, Aktion und Ergebnis.
+            Der Eintrag enthält keine Tokens und keine Messwerte.
+            Eine eigene Löschfunktion für das Audit-Log gibt es nicht.
+            Vollständiges Löschen der WHOOP-Daten setzt die gespeicherte Einwilligung für eine spätere Auswertung auf aus.
+          </li>
+          <li>
+            <strong>Gesamtes Konto.</strong>
+            Eine Schaltfläche zum Löschen des gesamten Kontos gibt es nicht.
+            Wer die lokale Datenbank auf dem PC entfernt, entfernt damit die dort liegenden Messwerte, Tokens,
+            die Verbindungszeile und das Audit-Log dieser Installation.
+          </li>
+        </ul>
+        <p>
+          Eine automatische Löschfrist ist nicht eingerichtet. Daten bleiben, bis der Betreiber sie löscht oder die lokale Datenbank entfernt.
+        </p>
+        <p>
+          Den Zugriff kann der Betreiber zusätzlich im WHOOP-Konto entziehen. Damit endet die Möglichkeit weiterer Abrufe.
+          Bereits in Life OS gespeicherte Kopien bleiben davon unberührt, bis sie dort gelöscht werden.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Weitere Daten in Life OS</h2>
+        <p>
+          Life OS speichert außerdem das lokale Konto: die E-Mail-Adresse als Anmeldename, das Passwort nur als Prüfwert,
+          Sitzungen und auf Wunsch einen Passkey. Dazu die Inhalte, die der Betreiber selbst anlegt, etwa Aufgaben, Ziele,
+          Erinnerungen, Widgets und Coach-Gespräche.
+          Diese Daten liegen auf demselben privaten Rechner. Sie sind nicht Gegenstand der WHOOP-Synchronisierung.
+          Einzelne Erinnerungen, Aufgaben und Widgets lassen sich in der Anwendung löschen. Das gesamte Konto lässt sich dort nicht löschen.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Empfänger</h2>
+        <ul>
+          <li><strong>WHOOP</strong> erhält die Anmeldung und liefert die Messwerte. WHOOP ist für das WHOOP-Konto selbst verantwortlich. WHOOP-Daten werden nicht verkauft und nicht für Werbung verwendet.</li>
+          <li><strong>OpenAI</strong> erhält heute keine WHOOP-Messwerte. Coach-Texte, die der Betreiber selbst sendet, gehen an OpenAI, wenn ein Schlüssel konfiguriert ist.</li>
+          <li><strong>GitHub</strong> stellt nur diese statische Seite bereit, sobald sie veröffentlicht ist. Gesundheitsdaten und der Quelltext von Life OS liegen dort nicht.</li>
+        </ul>
+        <p>Eine Weitergabe zu Werbezwecken findet nicht statt. Diese Seite bindet keine Tracker ein.</p>
+      </section>
+
+      <section>
+        <h2>10. Rechte</h2>
+        <p>
+          Soweit die DSGVO gilt, bestehen die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit
+          und Widerspruch sowie das Recht, eine Einwilligung mit Wirkung für die Zukunft zu widerrufen.
+          Auskunft über die gespeicherten WHOOP-Daten gibt „Daten exportieren“ in den Einstellungen.
+          Die Grenzen der Löschung stehen in Abschnitt 7.
+          Eine Beschwerde bei einer Aufsichtsbehörde bleibt möglich, wenn die DSGVO gilt.
+          Das Wohnsitzland steht in dieser Erklärung nicht.
+        </p>
+      </section>
+
+      <section>
+        <h2>11. Änderungen</h2>
+        <p>
+          Diese Erklärung wird angepasst, wenn sich die Verarbeitung ändert, insbesondere wenn ein NAS-Betrieb startet
+          oder eine Übermittlung von WHOOP-Messwerten an ein Modell tatsächlich gebaut wird. Das Datum oben ist der Stand dieser Erklärung.
+        </p>
+      </section>
+
+      <section class="en" lang="en">
+        <h2>Summary for the WHOOP review</h2>
+        <p>
+          The German text above is the privacy notice. This summary does not add any practice that the German text does not describe.
+        </p>
+        <p>
+          Life OS is a private, single-user application run by its operator on a personal Windows PC.
+          It is not offered to the public. A later move to a private NAS is planned and not in place.
+          WHOOP access is optional OAuth 2.0 with read scopes plus offline.
+          The profile email is not stored. Stored copies cover recovery, HRV, resting heart rate, sleep, strain, workouts, body measurements, and the related fields WHOOP returns for those endpoints.
+          Tokens, measurements, times, scores, sport, body measurements, the WHOOP user id and the first name are stored as AES-256-GCM envelopes.
+          Lookup uses an HMAC. The Life OS user id stays readable so deletion and account separation work.
+          Database backups are age-encrypted and do not contain the encryption key. WHOOP rows inside a restored backup stay envelopes until the same key is present.
+          WHOOP data is not sold, not used for advertising, and not used to train or improve an AI model.
+        </p>
+        <p>
+          Disconnect revokes access at WHOOP and deletes the local tokens. Measurements, the first name and the WHOOP user id stay on the device, encrypted.
+          “WHOOP-Daten löschen” stays available after disconnect while any local copy or the link remains.
+          It removes measurements, body data, the profile link and the short-lived OAuth state.
+          That deletion and every new connection set the stored consent switch to off. A new connection does not keep an earlier consent.
+          Both actions ask for confirmation.
+          There is no in-app button that deletes the whole account. Deleting the local database does.
+        </p>
+        <p>
+          WHOOP measurements are not sent to OpenAI or any other AI service. A stored consent does not lift that block.
+          The coach does not read the measurements. A model analysis of WHOOP data is not implemented.
+          Chat text the operator types can be sent to OpenAI when an API key is configured.
+        </p>
+        <p>
+          This page is static. It sets no cookies and loads no third-party resources.
+          Public contact: <a href="mailto:reichrtfinance@gmail.com">reichrtfinance@gmail.com</a>.
+          No home address is published.
+        </p>
+      </section>
+
+      <footer>
+        <p>Life OS · private Anwendung · diese Seite enthält keinen Anwendungscode, keine Messwerte und keine Zugangsdaten.</p>
+      </footer>
+    </main>
+  </body>
+</html>
